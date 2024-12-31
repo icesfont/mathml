@@ -1989,8 +1989,7 @@
        <tr>
         <td colspan="2" class="attdesc">
    Specifies whether the operator should be kept symmetric around the math
-   [=axis=] when stretchy.
-   Note this property only applies to vertically stretched symbols.
+   [=axis=] when vertically stretchy or large.
    See <a href="#presm_op_stretch"></a>.
         </td>
        </tr>
@@ -2849,8 +2848,7 @@
     <p>The <code class="attribute">symmetric</code> attribute governs whether the
     height and
     depth above and below the [=axis=] of the
-    character are forced to be equal
-    (by forcing both height and depth to become the maximum of the two).
+    character are forced to be equal.
     An example of a situation where one might set
     <code class="attribute">symmetric</code>=<code class="attributevalue">false</code>
     arises with parentheses around a matrix not aligned on the [=axis=], which
@@ -2858,7 +2856,8 @@
     wants the parentheses to stretch to cover the matrix, whereas stretching
     the parentheses symmetrically would cause them to protrude beyond one edge
     of the matrix. The <code class="attribute">symmetric</code> attribute only applies
-    to characters that stretch vertically (otherwise it is ignored).</p>
+    to characters that either stretch vertically or have the <code class="attribute">largeop</code>
+    property (otherwise it is ignored).</p>
  
     <p>If a stretchy <code class="element">mo</code> element is embellished (as defined
     earlier in this section), the <code class="element">mo</code> element at its core is
